@@ -8,8 +8,8 @@ class Driver(object):
 
     @before_suite
     def init(self):
-        self.username = os.getenv("LT_USERNAME") # replace with your LT username
-        self.authkey  = os.getenv("LT_ACCESS_KEY") # replace with your LT access key
+        self.username = os.getenv("LT_USERNAME") if os.getenv("LT_USERNAME") is not None else "LT_USERNAME" # replace with your LT username
+        self.authkey  = os.getenv("LT_ACCESS_KEY") if os.getenv("LT_ACCESS_KEY") is not None else "LT_ACCESS_KEY # replace with your LT access key
 
 
         caps = {}
