@@ -37,7 +37,7 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: pytest
-          
+
       - run:
  
           name: "Setup environment variables Username"
@@ -54,13 +54,13 @@ jobs:
  
           name: "Here is the LT_Username : "
  
-          command: echo ${LT_USERNAME}      
-          
+          command: echo ${LT_USERNAME}     
       - run: # Installing depedencies
           command: pip3 install -r requirements.txt
-      - run:
-          command: pip install Appium-Python-Client 
-      - run:
+      - run: # Installing depedencies
+          command: pip install Appium-Python-Client
+          
+      - run: # Installing depedencies
           command: npm install -g @getgauge/cli
       - run:
           command: gauge run specs
@@ -71,4 +71,4 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - Gauge-Python-Appium
+      - build-and-test
