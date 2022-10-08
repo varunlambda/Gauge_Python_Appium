@@ -30,6 +30,8 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
+      - node/install-packages:
+          pkg-manager: npm
       - run: npm install -g npm@latest
       - node/install-packages:
           cache-path: ~/project/node_modules
