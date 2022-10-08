@@ -34,6 +34,8 @@ jobs:
       - run: # Installing depedencies
           command: pip3 install Appium-Python-Client      
       - run: # Installing depedencies
+          command: npm install
+      - run: # Installing depedencies
           command: npm install -g @getgauge/cli
 
       - run:
