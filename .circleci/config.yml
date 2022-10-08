@@ -30,12 +30,14 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
+      - run: sudo npm install -g npm@latest
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
       - run: # Installing depedencies
           command: pip3 install -r requirements.txt
       - run: # Installing depedencies
           command: pip3 install Appium-Python-Client      
-      - run: # Installing depedencies
-          command: npm install
       - run: # Installing depedencies
           command: npm install -g @getgauge/cli
 
