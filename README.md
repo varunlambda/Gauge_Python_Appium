@@ -1,10 +1,6 @@
 # Getting Started with Appium Gauge and Python
 
-pip install -r requirements.txt (Python 2)
-
-pip3 install -r requirements.txt (Python 3)
-
-pip install Appium-Python-Client
+pip3 install -r requirements.txt
 
 npm install -g @getgauge/cli
 
