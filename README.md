@@ -8,6 +8,12 @@ pip install Appium-Python-Client
 
 npm install -g @getgauge/cli
 
+set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
+OR For MAC/Linux
+
+exort PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
 # Setting Up Your Authentication
 
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, purchase a plan or access the Automation Dashboard.
